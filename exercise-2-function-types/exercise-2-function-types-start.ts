@@ -24,13 +24,14 @@ doubleThePopulation(8_526);
 function languagesSpoken(
   country: string,
   language1: string,
-  language2: string
+  language2?: string
 ): void {
-  console.log(`The languages spoken in ${country} are:`);
+  console.log(`The languages spoken in ${country} are:${language1}`);
 
+  if (typeof language2 === "string") {
+    console.log(language2);
+  }
   console.log(language1);
-
-  console.log(language2);
 }
 
 languagesSpoken("Colombia", "Spanish", "English");
