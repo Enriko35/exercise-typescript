@@ -12,15 +12,15 @@ type Currency = string;
 
 let indianCurrency: Currency = "Indian rupee";
 
-let narniaCurrency: Currency = false;
+let narniaCurrency: Currency = "false";
 
 // Change the type for the `data` function parameter so it can accept
 // the different types of data that are passed when it's being called.
 //
 // This should fix the type error on Lines 28 and 30.
 
-function outputCountryData(country: string, data: number) {
-    console.log(`The data for ${country} is: ${data}`);
+function outputCountryData(country: string, data: any) {
+  console.log(`The data for ${country} is: ${data}`);
 }
 
 outputCountryData("Italy", 60_317_116);
@@ -33,4 +33,4 @@ outputCountryData("India", 1_352_642_280);
 
 // ----
 
-export {};
+export { indianCurrency, narniaCurrency };
