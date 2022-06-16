@@ -3,16 +3,14 @@
  */
 
 class Currency {
-  public name: string;
-  public code: string;
-  public symbol: string;
-  public bankNotes: number[];
+  protected name: string;
+  private code: string;
+  private symbol: string;
 
-  constructor(name: string, code: string, symbol: string, bankNotes: number[]) {
+  constructor(name: string, code: string, symbol: string) {
     this.name = name;
     this.code = code;
     this.symbol = symbol;
-    this.bankNotes = bankNotes;
   }
 
   public describe(): void {
@@ -27,15 +25,17 @@ class Currency {
 // Alter this class to extend the `Currency` class.
 
 class DetailedCurrency extends Currency {
+  private bankNotes: number[];
   // Define a private field named `banknotes`.
   // Set the field type so it can be used to store an array of numbers.
 
   // Add a `banknotes` parameter with the same type as the `banknotes` field.
 
-  constructor(name: string, code: string, symbol: string, banknotes: number[]) {
+  constructor(name: string, code: string, symbol: string, bankNotes: number[]) {
     // Fix this call to the parent constructor.
 
-    super(name, code, symbol, banknotes);
+    super(name, code, symbol);
+    this.bankNotes = bankNotes;
 
     // Store the value of the `banknotes` parameter in the corresponding field.
   }

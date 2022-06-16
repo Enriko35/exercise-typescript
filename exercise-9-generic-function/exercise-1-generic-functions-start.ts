@@ -30,10 +30,12 @@ interface User {
 // Pass the `User` type as a type argument to the generic `fetchData()` function.
 // This should fix the type error on Line 35.
 
-let user: User = await fetchData("http://api.com/user/1");
+const Prova = async function () {
+  let user: User = await fetchData("http://api.com/user/1");
 
-console.log(user.name);
-
+  console.log(user.name);
+};
+Prova();
 // ----
 
 export { value1, value2 };
